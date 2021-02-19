@@ -4,29 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <link rel="stylesheet" href="dist/css/styles.css" />
     <link rel="stylesheet" href="dist/css/reset.css" />
+    <link rel="stylesheet" href="dist/css/styles.css" />
     <title>(S)CSS Masterclass</title>
   </head>
   <body>
-    <section>
-      <h1>BEST HORROR SCENES</h1>
-      <div class="info">
-        <H3>An ever growing collection featuring some of the best scenes in horror.</H3>
-        <p>“Best Horror Scenes” is a collection of scenes I feel are some of the most affecting in horror. Some may be simple black cat scares, others may be more subdued or nuanced. Many come from films that aren't necessarily “horror” but have elements or threads of horror, and all have the same general effect: unease, dread, fear, shock, disgust.</p>
-        <div class="link_footer">
-          <a href="https://www.youtube.com/c/besthorrorscenes" target="_blank">Watch on YouTube</a>
-          <a href="https://besthorrorscenes.typeform.com/to/cJgjcf" target="_blank">Suggest a Scene</a>
-          <a href="http://email.palaxytracks.com/h/d/E638ABACCA3ADA9B" target="_blank">Get Episode Notices</a>
-        </div>
+    <header>
+      <h1>
+        Best Horror Scenes
+      </h1>
+      <div class="bottom">
+        <h3>
+          An ever growing collection featuring some of the best scenes in
+          horror.
+        </h3>
+        <p>
+          “Best Horror Scenes” is a collection of scenes I feel are some of the
+          most affecting in horror. Some may be simple black cat scares, others
+          may be more subdued or nuanced. Many come from films that aren't
+          necessarily “horror” but have elements or threads of horror, and all
+          have the same general effect: unease, dread, fear, shock, disgust.
+        </p>
+        <nav>
+          <ul>
+            <li>Watch on YouTube</li>
+            <li>Suggest a Scene</li>
+            <li>Get Episode Notices</li>
+            <li>Contact</li>
+            <li>RSS</li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
     <main>
-      <div class="scenes">
-        <div class="scene">
-          <div class="scene_info">
-            <h1 class="scene_title">56. THE VANISHING (1988)</h1>
-            <h3 class="scene_director">Directed by George Sluizer</h3>
+      <section class="movie">
+        <div class="wrapper">
+          <div class="movie__header">
+            <h4>56. THE VANISHING (1988)</h4>
+            <h5>Directed by George Sluizer</h5>
           </div>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/q17PtQMyDdg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="vote">
@@ -35,10 +50,12 @@
             <i class="far fa-thumbs-down"></i>
           </div>
         </div>
-        <div class="scene">
-          <div class="scene_info">
-            <h1 class="scene_title">55. THE OMEN (1976)</h1>
-            <h3 class="scene_director">Directed by Richard Donner</h3>
+      </section>
+      <section class="movie">
+        <div class="wrapper">
+          <div class="movie__header">
+            <h4>55. THE OMEN (1976)</h4>
+            <h5>Directed by Richard Donner</h5>
           </div>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/m8GFEfNYS_E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="vote">
@@ -47,10 +64,12 @@
             <i class="far fa-thumbs-down"></i>
           </div>
         </div>
-        <div class="scene">
-          <div class="scene_info">
-            <h1 class="scene_title">53. THE SHINING (1980)</h1>
-            <h3 class="scene_director">Directed by Stanley Kubrick</h3>
+      </section>
+      <section class="movie">
+        <div class="wrapper">
+          <div class="movie__header">
+            <h4>53. THE SHINING (1980)</h4>
+            <h5>Directed by Stanley Kubrick</h5>
           </div>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/Sl0-YCsMtdA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="vote">
@@ -59,10 +78,12 @@
             <i class="far fa-thumbs-down"></i>
           </div>
         </div>
-        <div class="scene">
-          <div class="scene_info">
-            <h1 class="scene_title">56. JAWS (1975)</h1>
-            <h3 class="scene_director">Directed by Steven Spielberg</h3>
+      </section>
+      <section class="movie">
+        <div class="wrapper">
+          <div class="movie__header">
+            <h4>56. JAWS (1975)</h4>
+            <h5>Directed by Steven Spielberg</h5>
           </div>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/d5F0BBoKW9Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="vote">
@@ -70,8 +91,7 @@
             <i class="far fa-thumbs-up"></i>
             <i class="far fa-thumbs-down"></i>
           </div>
-        </div>
-      </div>
+      </section>
       <footer>
         <button type="button" class="btn_youtube">
           <i class="fab fa-youtube"></i>YouTube
