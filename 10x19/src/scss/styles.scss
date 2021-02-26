@@ -5,73 +5,55 @@
 }
 
 body {
-  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   height: 100vh;
-  color: $brown;
-}
-
-.hover:hover {
   background-color: $brown;
-  color: white;
-  cursor: pointer;
-}
-
-header {
-  height: 10vh;
+  color: $brown;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  border-bottom: 1px solid $brown;
-  div {
+  grid-template-columns: 1.5fr 1.9fr 1.5fr;
+  grid-template-rows: 1fr 5fr 1fr;
+  gap: 1px;
+  font-size: 22px;
+  text-transform: uppercase;
+  & > * {
+    background-color: white;
+  }
+  .menu {
+    grid-column-start: -2;
+  }
+  .center-image {
+    grid-column: 2 / -2;
+    grid-row: 2 / -2;
+    background-image: url("https://images.unsplash.com/photo-1583309219338-a582f1f9ca6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1364&q=80");
+    background-size: cover;
+    background-position: center;
+  }
+  .number__row {
+    background-color: $brown;
+    display: grid;
+    grid-template-rows: repeat(5 1fr);
+    gap: 1px;
+    height: 100%;
+    align-items: stretch;
+  }
+  .menu, .number {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    text-transform: uppercase;
+    background-color: white;
+    cursor: pointer;
+    transition: color 0.2s linear, background-color 0.2s linear;
+    &:hover {
+      background-color: $brown;
+      color: white;
+    }
   }
-  div:nth-child(2) {
-    border-right: 1px solid $brown;
-    border-left: 1px solid $brown;
-  }
-}
 
-main {
-  height: 80vh;
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
-  grid-auto-flow: column;
-  div {
+  .scrolling__text {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
-    border-bottom: 1px solid $brown;
-  }
-}
-
-.photo {
-  grid-row: 1 / -1;
-  border: 1px solid $brown;
-  border-top: 0;
-  img { 
-    width: 100%;
-    max-width: 100%; 
-    max-height: 100%;
-    object-fit: contain;
-  }
-}
-
-footer {
-  height: 10vh;
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  marquee {
-    border-right: 1px solid $brown;
-    border-left: 1px solid $brown;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 28px;
-    behavior: scroll;
+    grid-column-start: 2;
   }
 }
