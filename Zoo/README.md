@@ -1,3 +1,3 @@
-## Clone [Zoo](http://www.z-o-o.fr/)
+## Clone [zoo](http://www.z-o-o.fr/)
 
-<!-- <img src="./zoo.gif" width="600"/> -->
+<img src="./zoo.gif" width="600"/>

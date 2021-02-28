@@ -5,90 +5,111 @@
 }
 
 body {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50px;
-  grid-auto-rows: 350px;
-  .header {
-    display: flex;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  nav {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 32px;
     text-transform: lowercase;
-    cursor: pointer;
-  }
-  .column1 {
-    grid-column: 1/-2;
-    .home {
-      margin-left: 10px;
-      margin-right: 100px;
+    ul {
+      display: flex;
+      align-items: center;
+      padding: 0px 15px;
+      li {
+        margin-right: 50px;
+      }
       &:hover {
-        color: white;
+        background-color: $gray;
       }
-      &:hover ~ .info{
-        color: black;
+      &:first-child {
+        &:hover {
+          li:not(:first-child) {
+            color: white;
+          }
+        }
+        li {
+          &:first-child {
+            margin-right: 100px;
+            &:hover {
+              color: white;
+            }
+            &:hover ~ li{
+              color: black;
+            }
+          }
+          &:not(:first-child) {
+            color: $gray;
+            margin-right: 50px;
+          }
+        }
       }
-    }
-    .info {
-      color: $gray;
-      margin-right: 50px;
-    }
-    &:hover {
-      background-color: $gray;
-      .info {
-        color: white;
+      &:last-child {
+        li {
+          margin-right: 100px;
+        }
       }
-    }
-  }
-  .column2 {
-    span {
-      margin-right: 100px;
-    }
-    &:hover {
-      background-color: $gray;
     }
   }
 }
 
-.work {
+main {
+  margin-top: 50px;
   display: grid;
-  grid-template-rows: auto 30px;
-  cursor: pointer;
-
-  .photo {
-    background-size: cover;
-    background-position: center;
-  }
-  .name {
-    padding: 10px;
-    text-transform: uppercase;
-  }
-  .photo1 {
-    background-image: url(http://www.z-o-o.fr/thumbs/works/courants-verts/courants-verts_web_accueil-800x533-q80.jpg);
-  }
-  .photo2 {
-    background-image: url(http://www.z-o-o.fr/thumbs/works/chateau-d-ecouen-musee-national-de-la-renaissance/crop_cover-800x533-q80.jpg);
-  }
-  .photo3 {
-    background-image: url(http://www.z-o-o.fr/thumbs/works/moco-montpellier-contemporain/zoofr-moco-02-800x533-q80.jpg);
-  }
-  .photo4 {
-    background-image: url(http://www.z-o-o.fr/thumbs/works/amos-sport-business-school/amos_1-800x533-q80.jpg);
-  }
-  .photo5 {
-    background-image: url(http://www.z-o-o.fr/thumbs/works/architectures-cree/cree_1-800x534-q80.jpg);
-  }
-  .photo6 {
-    background-image: url(http://www.z-o-o.fr/thumbs/works/idheal/idheal-800x533-q80.jpg);
-  }
-  .photo7 {
-    background-image: url(http://www.z-o-o.fr/thumbs/works/rero-via-negativa-skira/skira_zoo_1_1-800x533-q80.jpg);
-  }
-  .photo8 {
-    background-image: url(http://www.z-o-o.fr/thumbs/works/terabilis-paysage/terabilis_web_1-800x533-q80.jpg);
-  }
-  .photo9 {
-    background-image: url(http://www.z-o-o.fr/thumbs/works/quai-branly-paris/slide_quai_branly-1-800x533-q80.jpg);
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 45vh;
+  .work {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10fr 0.8fr;
+    cursor: pointer;
+  
+    .photo {
+      background-size: cover;
+      background-position: center;
+    }
+    .name {
+      padding: 10px;
+      text-transform: uppercase;
+    }
+    .photo1 {
+      background-image: url(http://www.z-o-o.fr/thumbs/works/courants-verts/courants-verts_web_accueil-800x533-q80.jpg);
+    }
+    .photo2 {
+      background-image: url(http://www.z-o-o.fr/thumbs/works/chateau-d-ecouen-musee-national-de-la-renaissance/crop_cover-800x533-q80.jpg);
+    }
+    .photo3 {
+      background-image: url(http://www.z-o-o.fr/thumbs/works/moco-montpellier-contemporain/zoofr-moco-02-800x533-q80.jpg);
+    }
+    .photo4 {
+      background-image: url(http://www.z-o-o.fr/thumbs/works/amos-sport-business-school/amos_1-800x533-q80.jpg);
+    }
+    .photo5 {
+      background-image: url(http://www.z-o-o.fr/thumbs/works/architectures-cree/cree_1-800x534-q80.jpg);
+    }
+    .photo6 {
+      background-image: url(http://www.z-o-o.fr/thumbs/works/idheal/idheal-800x533-q80.jpg);
+    }
+    .photo7 {
+      background-image: url(http://www.z-o-o.fr/thumbs/works/rero-via-negativa-skira/skira_zoo_1_1-800x533-q80.jpg);
+    }
+    .photo8 {
+      background-image: url(http://www.z-o-o.fr/thumbs/works/terabilis-paysage/terabilis_web_1-800x533-q80.jpg);
+    }
+    .photo9 {
+      background-image: url(http://www.z-o-o.fr/thumbs/works/quai-branly-paris/slide_quai_branly-1-800x533-q80.jpg);
+    }
   }
 }
