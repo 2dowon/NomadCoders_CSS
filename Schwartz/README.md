@@ -1,3 +1,3 @@
 ## Clone [Schwartz](https://schwartzmedia.com.au/)
 
-<!-- <img src="./zoo.gif" width="600"/> -->
+<img src="./schwartz.gif" width="600"/>
