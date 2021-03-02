@@ -1,0 +1,13 @@
+%button {
+    width: 145px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 1px solid $light_gray;
+    border-radius: 20px;
+    transition: color 0.2s linear, background-color 0.2s linear;
+    &:hover{
+      background-color: $black;
+      color: white;
+    }
+  }
